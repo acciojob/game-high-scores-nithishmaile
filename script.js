@@ -15,13 +15,13 @@ function saveScore() {
   }
 
   // Get existing scores from localStorage
-  let storedScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  let storedScores = JSON.parse(localStorage.getItem("scores")) || [];
 
   // Add new score
   storedScores.push({ name, score });
 
   // Save back to localStorage
-  localStorage.setItem("highScores", JSON.stringify(storedScores));
+  localStorage.setItem("scores", JSON.stringify(storedScores));
 
   // Clear inputs
   nameInput.value = "";
@@ -34,7 +34,7 @@ function saveScore() {
 // Show scores in div
 function showScores() {
   // complete the code
-	const storedScores = JSON.parse(localStorage.getItem("highScores")) || [];
+	const storedScores = JSON.parse(localStorage.getItem("scores")) || [];
 
   // If no scores
   if (storedScores.length === 0) {
